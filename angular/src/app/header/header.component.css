@@ -1,0 +1,170 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-and-nav {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav {
+    margin-left: 50px;
+    display: flex;
+    gap: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+}
+
+a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    font-weight: 600;
+}
+
+.desktop-cta-button,
+.mobile-cta-button,
+.mobile-menu-cta-button {
+    background-color: #007bff;
+    color: white;
+    font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.desktop-cta-button:hover,
+.mobile-cta-button:hover,
+.mobile-menu-cta-button:hover {
+    background-color: #0056b3;
+}
+
+.mobile-cta-button {
+    display: none;
+}
+
+.mobile-nav-button {
+    display: none;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.mobileMenu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+}
+
+.menuBlur {
+    height: 100%;
+    width: 20%;
+    background-color: black;
+    opacity: .5;
+    animation: makeBlurOpaque .2s forwards;
+}
+
+.menuBox {
+    height: 100%;
+    width: 80%;
+    background-color: #f4f3f2;
+    animation: makeMenuOpaque .2s forwards;
+}
+
+.exit {
+    float: right;
+    margin: 0px 35px;
+    font-size: 60pt;
+    cursor: pointer;
+    font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.menuOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.menuOption {
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    font-size: 32pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.top {
+    margin-top: 125px;
+}
+
+.mobile-menu-cta-button {
+    width: 95%;
+    display: block;
+    margin: 60px auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav-button {
+        display: flex;
+    }
+
+    .desktop-cta-button {
+        display: none;
+    }
+
+    .mobile-cta-button {
+        display: block;
+    }
+}
+
+@keyframes makeBlurOpaque {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .5;
+    }
+}
+
+@keyframes makeMenuOpaque {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

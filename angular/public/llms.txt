@@ -1,0 +1,4 @@
+# Large Language Model Services (LLMS) Declaration File
+# For more information, see https://llms.txt
+
+llms: none
