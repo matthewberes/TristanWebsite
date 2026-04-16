@@ -1,1 +1,20 @@
-<p>testimonials works!</p>
+<div class="container carbon-fiber">
+    <h2>What Our Customers Say</h2>
+    <div class="carousel">
+        <button class="left-button" (click)="prevTestimonial()">&#8592;</button>
+        <div class="testimonial-card" [class.is-moving-left]="isMovingLeft" [class.is-moving-right]="isMovingRight">
+            <ng-container *ngFor="let star of Array(testimonials[currIndex].stars)">
+                <span class="star">&#9733;</span>
+            </ng-container>
+
+            <p class="testimonial-text">"{{ testimonials[currIndex].text }}"</p>
+            <p class="testimonial-author">{{ testimonials[currIndex].author }}</p>
+        </div>
+        <button class="right-button" (click)="nextTestimonial()">&#8594;</button>
+    </div>
+    <div class="carousel-indicator">
+        <ng-container *ngFor="let testimonial of testimonials; let i = index">
+            <span class="indicator" [class.active]="i === currIndex" (click)="goToTestimonial(i)">&#9679;</span>
+        </ng-container>
+    </div>
+</div>
