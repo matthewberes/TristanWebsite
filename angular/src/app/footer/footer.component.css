@@ -7,6 +7,10 @@
     padding: 5px 20px;
 }
 
+.logo {
+    flex: 1;
+}
+
 .business-name {
     display: flex;
     flex-direction: column;
@@ -41,7 +45,32 @@
 }
 
 .copyright {
+    flex: 1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
     font-size: 11pt;
     color: gray;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        /* align-items: flex-start; */
+    }
+
+    .logo {
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 14pt;
+    }
+
+    .year {
+        font-size: 12pt;
+    }
+
+    .links {
+        margin-top: 10px;
+    }
 }
