@@ -1,1 +1,12 @@
-<p>services-section works!</p>
+<div class="container">
+    <h2>Our Services</h2>
+    <div class="card-container">
+        <ng-container *ngFor="let service of services">
+            <div class="service-card" (click)="navigateTo(service.link)">
+                <img src="{{ service.image }}" alt="{{ service.title }} image" class="service-image">
+                <p class="title">{{ service.title }}</p>
+                <p>{{ service.description }}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

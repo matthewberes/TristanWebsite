@@ -34,14 +34,27 @@
 }
 
 .links a {
+    color: #222;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12pt;
 }
 
+.links a:hover {
+    text-decoration: underline;
+}
+
 .links a.active {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.cta {
+    color: #007bff !important;
+}
+
+.cta:hover {
+    color: #0056b3 !important;
 }
 
 .copyright {

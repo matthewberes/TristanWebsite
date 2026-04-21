@@ -27,6 +27,11 @@ h1 {
 
 .desktop-nav a {
     text-decoration: none;
+    color: #222;
+}
+
+.desktop-nav a:hover {
+    text-decoration: underline;
 }
 
 .desktop-nav a.active,
