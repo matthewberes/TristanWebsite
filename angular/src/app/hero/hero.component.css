@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: opacity(50%) brightness(110%);
+    filter: opacity(50%) brightness(85%);
     z-index: 1;
 }
 
@@ -26,7 +26,7 @@ h2 {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #444444;
     margin: 0;
     text-align: center;
@@ -51,4 +51,15 @@ h2 {
 
 .cta:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        height: 400px;
+        gap: 40px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
 }

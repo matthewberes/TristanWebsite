@@ -1,11 +1,11 @@
 <div class="container carbon-fiber">
-    <h2>What Our Customers Say</h2>
+    <h2>What Our Customers Are Saying</h2>
     <div class="carousel">
         <button class="left-button" (click)="prevTestimonial()">&#8592;</button>
         <div class="testimonial-card" [class.is-moving-left]="isMovingLeft" [class.is-moving-right]="isMovingRight">
-            <ng-container *ngFor="let star of Array(testimonials[currIndex].stars)">
-                <span class="star">&#9733;</span>
-            </ng-container>
+            <div>
+                <span class="star" *ngFor="let star of Array(testimonials[currIndex].stars)">&#9733;</span>
+            </div>
 
             <p class="testimonial-text">"{{ testimonials[currIndex].text }}"</p>
             <p class="testimonial-author">{{ testimonials[currIndex].author }}</p>

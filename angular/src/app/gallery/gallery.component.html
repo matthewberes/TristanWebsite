@@ -1,1 +1,12 @@
-<p>gallery works!</p>
+<div class="container">
+    <div class="header">
+        <h2>Our Gallery</h2>
+        <p>Check out our latest car detailing work.</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item" *ngFor="let image of galleryImages">
+            <img [src]="image.src" [alt]="image.alt">
+        </div>
+    </div>
+</div>
